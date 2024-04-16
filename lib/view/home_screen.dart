@@ -29,6 +29,11 @@ class _HomeScreenState extends State<HomeScreen> {
         itemCount: controller.list.length,
         itemBuilder: (context, index) {
           final userData = controller.list[index];
+          if (controller.list.isEmpty) {
+            return const Center(
+              child: Text('No Data Found'),
+            );
+          }
           return Card(
             child: Padding(
               padding: const EdgeInsets.all(8.0),
