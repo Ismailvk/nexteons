@@ -54,5 +54,6 @@ class _HomeScreenState extends State<HomeScreen> {
 
   getData() async {
     await controller.getData();
+    setState(() {});
   }
 }
